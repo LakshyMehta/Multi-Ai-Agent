@@ -1,7 +1,7 @@
 from autogen import GroupChat, GroupChatManager
-from agents.doctor import doctor_agent
-from agents.patient import patient_agent
-from agents.judge import judge_agent
+from Agents.doctor import doctor_agent
+from Agents.patient import patient_agent
+from Agents.judge import judge_agent
 
 group_chat = GroupChat(
     agents=[patient_agent, doctor_agent, judge_agent],
@@ -11,7 +11,6 @@ group_chat = GroupChat(
 
 manager = GroupChatManager(groupchat=group_chat)
 
-# Start conversation
 patient_agent.initiate_chat(
     manager,
     message="""
